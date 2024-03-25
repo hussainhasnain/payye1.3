@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="img/favicon/favicon-new/favicon.ico" type="image/x-icon">
+    <!-- <link rel="icon" href="img/favicon/favicon old.ico"> -->
+    <!-- Link to google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Apex Charts CDN Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.min.css">
+
+    <!-- Font Awesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Date Range Picker -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+    <!-- FlatPickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Link to our CSS File -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Payye</title>
+</head>
+
+<body class="dashboard">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Dashboard Starts Here -->
+
+    <!--=========================== Header starts here =============================== -->
+    <div class="sidebarr" id="main">
+
+
+        <header class="header">
+            <div class="header__content">
+                <h2 class="welcome__textbox--heading-text">
+                    The Trust At -
+                    <!-- Change the name below to toggle the map -->
+                    <span class="plan plan__style">Enterprise</span>
+                    <span class="plan__style">Plan</span>
+                </h2>
+
+                <div class="header__profileBox">
+                    <div class="header__profileBox--flex">
+                        <p class="header__profileBox--flex-user">
+                            Jamshed
+                        </p>
+                        <!-- <span onclick="openNav()" class="hamburger"><ion-icon name="menu-outline"></ion-icon></span> -->
+                        <span onclick="toggleSidebar()" class="hamburger"><ion-icon
+                                name="menu-outline"></ion-icon></span>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!--=========================== Header Ends here =============================== -->
+
+        <!--=========================== New Sidebar starts here =============================== -->
+
+        <div id="mySidenav" class="sidenav">
+            <a href="#" class="logo__link">
+                <img src="img/logo/logo with a/logo-payye-dark.svg" alt="logo" class="logo__img--new">
+            </a>
+            <div class="sidenav__list">
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex sidenav__link--active">
+                    Dashboard
+                </a>
+
+                <!-- <script>
+                        // Get the reference to the image element
+                        let dashboardLogo = document.getElementById('dashboardLogo');
+                
+                        // Add click event listener to the image
+                        dashboardLogo.addEventListener('click', function() {
+                            // Redirect to dashboard link
+                            window.location.href = 'your_dashboard_link_here';
+                        });
+                    </script> -->
+
+
+
+
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Contacts
+                </a>
+
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Letters
+                </a>
+
+
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Reports
+                </a>
+
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Gift Aid
+                </a>
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Profile
+                </a>
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Users
+                </a>
+                <a href="#" class="sidenav__link sidenav__list--item sidenav__list--item-flex">
+                    Integrations
+                </a>
+
+                </a>
+                <div class="sidenav__list--item-logout">
+                    <a href="#" class="btn__logout">Logout</a>
+                </div>
+            </div>
+            <!-- <div class="footer__copyright">
+                    <p class="footer__copyright--text">
+                        &copy; 2023 AdShare Ltd
+                    </p>
+                </div>     -->
+
+            <div class="footer__copyright">
+                <p class="footer__copyright--text" id="copyright-text">
+                    &copy; <span id="current-year"></span> Payye Ltd
+                </p>
+            </div>
+
+            <script>
+                document.getElementById("current-year").textContent = new Date().getFullYear();
+            </script>
+
+
+
+        </div>
+
+        <!--=========================== New Sidebar Ends here =============================== -->
+
+        <!--=========================== Section Welcome starts here =============================== -->
+
+        <!-- <div class="nodata">
+                <div class="row">
+                    <div class="nodata__content">
+                        <p class="nodata__msg">Data populating, please contact your Account Management Representative</p>
+                        <a href="#" class="btn btn__login nodata__button">Log Out</a>
+                    </div>
+                </div>
+            </div> -->
+        <main class="main dashboard__row">
+
+            <div class="noData__validation">
+
+            </div>
+
+            <section class="welcome">
+                <!-- <div class="row"> //////////////////////////////////////////////////////-->
+                <div class="welcome__content">
+                    <div class="welcome__textbox">
+
+                        <div class="welcome__textbox--breadcrumb">
+                            <a href="#"
+                                class="welcome__textbox--breadcrumb-link welcome__textbox--breadcrumb-link-active">
+                                <i class="fa-solid fa-circle icon icon__circle icon__circle--green"></i>
+                                Pixel Active &MediumSpace; /
+                            </a>
+                            <a href="#" class="welcome__textbox--breadcrumb-link">
+                                &MediumSpace;
+                                <i class="fa-solid fa-circle icon icon__circle icon__circle--red"></i>
+                                Conversion Tracking Active
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="welcome__buttons">
+                        <div class="welcome__buttons--content">
+                            <div id="reportrange">
+                                <i class="fa fa-calendar"></i>&nbsp;
+                                <span></span> <i class="fa fa-caret-down"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+            <!--=========================== Section Welcome Ends here =============================== -->
+            <!-- <div class="row">
+                <div class="sample__content">
+                    
+                
+                    <div class="successMsg">
+                        <div class="successMsg__icon">
+                        </div>
+                        <p class="successMsg__text">
+                            There is no data available of your selected month.
+                        </p>
+                    </div>
+                </div>
+            </div> -->
+            <!--=========================== Section impressions starts here =============================== -->
+            <section class="impressions">
+                <!-- <div class="row"> ////////////////////////////////////////////////-->
+                <div class="impressions__content">
+                    <div class="impressions__box impressions__box--1">
+                        <div class="impressions__box--textContent">
+                            <div class="impressions__box--heading">
+                                <p class="impressions__box--heading-text">
+                                    Impressions
+                                </p>
+                                <p class="impressions__box--heading-icon tooltip">
+                                    <ion-icon name="help-circle-outline" class="icon__tooltip"></ion-icon>
+                                    <span class="tooltiptext">Impressions represent the total number of times content is
+                                        displayed, indicating the overall visibility & reach of the site during a
+                                        specific period.</span>
+                                </p>
+                            </div>
+
+                            <div class="impressions__box--content">
+                                <p class="impressions__box--content-text">
+                                    <span class="impressions__box--content-text-big">519,203</span>.00
+                                </p>
+                                <!-- <p class="impressions__box--content-txt">
+                                        gbp
+                                    </p> -->
+                            </div>
+                            <div class="impressions__box--graph">
+                                <div class="impressions__box--graph-content color-yellow-bar">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="impressions__box impressions__box--2">
+                        <div class="impressions__box--textContent">
+                            <div class="impressions__box--heading">
+                                <p class="impressions__box--heading-text">
+                                    Click on Ads
+                                </p>
+                                <p class="impressions__box--heading-icon tooltip">
+                                    <ion-icon name="help-circle-outline" class="icon__tooltip"></ion-icon>
+                                    <span class="tooltiptext">Clicks on ads refer to the instances where users interact
+                                        with an advertisement by selecting or tapping on it, indicating engagement and
+                                        interest in the promoted content.</span>
+                                </p>
+                            </div>
+
+                            <div class="impressions__box--content">
+                                <p class="impressions__box--content-text">
+                                    <span class="impressions__box--content-text-big">9,079</span>.00
+                                </p>
+                                <!-- <p class="impressions__box--content-txt">
+                                        gbp
+                                    </p> -->
+                            </div>
+                            <div class="impressions__box--graph">
+                                <div class="impressions__box--graph-content color-green-bar">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="impressions__box impressions__box--2">
+                        <div class="impressions__box--textContent">
+                            <div class="impressions__box--heading">
+                                <p class="impressions__box--heading-text">
+                                    CTR Rate
+                                </p>
+                                <p class="impressions__box--heading-icon tooltip">
+                                    <ion-icon name="help-circle-outline" class="icon__tooltip"></ion-icon>
+                                    <span class="tooltiptext">This is the percentage of clicks an online advertisement
+                                        receives divided by the number of times it was displayed, serving as a key
+                                        metric to measure the effectiveness and relevance of the advert in generating
+                                        user engagement.</span>
+                                </p>
+                            </div>
+
+                            <div class="impressions__box--content">
+                                <p class="impressions__box--content-text">
+                                    <span class="impressions__box--content-text-big">1.75%</span>
+                                </p>
+                                <!-- <p class="impressions__box--content-txt">
+                                        gbp
+                                    </p> -->
+                            </div>
+                            <div class="impressions__box--graph">
+                                <div class="impressions__box--graph-content color-blue-bar">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="impressions__box impressions__box--2">
+                        <div class="impressions__box--textContent">
+                            <div class="impressions__box--heading">
+                                <p class="impressions__box--heading-text">
+                                    Video Engagements
+                                </p>
+                                <p class="impressions__box--heading-icon tooltip">
+                                    <ion-icon name="help-circle-outline" class="icon__tooltip"></ion-icon>
+                                    <span class="tooltiptext">Video engagements encompass various interactions such as
+                                        views, likes, comments, and shares, providing a holistic measure of audience
+                                        interaction and interest with the video content.</span>
+                                </p>
+                            </div>
+
+                            <div class="impressions__box--content">
+                                <p class="impressions__box--content-text">
+                                    <span class="impressions__box--content-text-big">76,327</span>.00
+                                </p>
+                                <!-- <p class="impressions__box--content-txt">
+                                        gbp
+                                    </p> -->
+                            </div>
+                            <div class="impressions__box--graph">
+                                <div class="impressions__box--graph-content color-secondary-bar">
+                                    &nbsp;
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+            <!--=========================== Section impressions Ends here =============================== -->
+
+            <!--=========================== Section Accounts starts here =============================== -->
+            <section class="account account__plan">
+                <!-- <div class="row">/////////////////////////////////////////////////// -->
+                <div class="account__content">
+
+                    <div class="account__box account__box--1">
+                        <div class="account__box--heading">
+                            <h3 class="account__box--heading-text">
+                                Account & Monthly Recurring Revenue Growth
+                            </h3>
+                        </div>
+
+                        <div class="account__box--content">
+                            <div class="account__box--content-box account__box--content-box-1">
+                                <p class="account__box--content-box-price count_of_conversion">
+                                    £620,076
+                                </p>
+                                <p class="account__box--content-box-text">
+                                    mrr growth
+                                </p>
+                                <p class="account__box--content-box-para">
+                                    Measure how fast you're growing monthly recurring revenue.
+
+                                </p>
+                            </div>
+
+                            <div class="account__box--content-box account__box--content-box-1 margin-left-4">
+                                <p class="account__box--content-box-price total_converted_amount">
+                                    £1,200
+                                </p>
+                                <p class="account__box--content-box-text">
+                                    avg.mrr / customer
+                                </p>
+                                <p class="account__box--content-box-para">
+                                    The revenue generated per account on a monthly or yearly basis.
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="area-chart">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+            <!--=========================== Section Accounts Ends here =============================== -->
+
+            <!-- ============== Section Test Table of Graph starts =================-->
+            <!-- <section class="test__graph">
+            <div class="test__graph--content">
+                
+                <div class="test__graph--year">
+                    <h3 class="test__graph--year-heading">
+                        2021 
+                    </h3>
+                    <div class="test__graph--year-data">
+                        <p class="test__graph--year-data-text">
+                            5
+                        </p>
+                        <p class="test__graph--year-data-text">
+                            5
+                        </p>
+                        <p class="test__graph--year-data-text">
+                            5
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="test__graph--year">
+                    <h3 class="test__graph--year-heading">
+                        2022
+                    </h3>
+                    <div class="test__graph--year-data">
+                        <p class="test__graph--year-data-text">
+                            10
+                        </p>
+                        <p class="test__graph--year-data-text">
+                            10
+                        </p>
+                        <p class="test__graph--year-data-text">
+                            10
+                        </p>
+                    </div>
+                </div>
+            
+
+                <div class="test__graph--year">
+                    <h3 class="test__graph--year-heading">
+                        2023
+                    </h3>
+                    <div class="test__graph--year-data">
+                        <p class="test__graph--year-data-text">
+                            15
+                        </p>
+                        <p class="test__graph--year-data-text">
+                            15
+                        </p>
+                        <p class="test__graph--year-data-text">
+                            15
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="test__graph--months">
+                <p class="test__graph--months-month">
+                    jan
+                </p>
+                <p class="test__graph--months-month">
+                    feb
+                </p>
+                <p class="test__graph--months-month">
+                    mar
+                </p>
+                <p class="test__graph--months-month">
+                    apr
+                </p>
+                <p class="test__graph--months-month">
+                    may
+                </p>
+                <p class="test__graph--months-month">
+                    jun
+                </p>
+            </div>
+            <style>
+                .test__graph {
+                    margin-top: 2rem;
+                    }
+                    .test__graph--content {
+                    display: flex;
+                    text-align: center;
+                    }
+                    .test__graph--year {
+                    flex: 1;
+                    }
+                    .test__graph--year-heading {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    }
+                    .test__graph--year-data-text {
+                    font-size: 1.6rem;
+                    }
+                    .test__graph--months{
+                        display: flex;
+                        gap: 1rem;
+                        margin-top: 2rem;
+                        width: 100%;
+                        justify-content: center;
+                    }
+                    .test__graph--months-month{
+                        font-size: 1.8rem;
+                    }
+            </style>
+        </section> -->
+            <!-- ============== Section Test Table of Graph Ends =================-->
+
+
+            <!-- ====================== Quick Action heading Starts ============= -->
+            <section class="quick">
+                <!-- <div class="row">////////////////////////////////////////// -->
+                <h2 class="quick__heading">
+                    Quick Tips
+                </h2>
+                <!-- </div> -->
+            </section>
+            <!-- ====================== Quick Action heading Ends ============= -->
+
+            <!--=========================== Section Quick box starts here =============================== -->
+            <section class="quickBox">
+                <!-- <div class="row">//////////////////////////////////////// -->
+                <div class="quickBox__content">
+                    <div class="quickBox__box quickBox__box--1">
+                        <div class="quickBox__box--textContent">
+                            <div class="quickBox__box--photo">
+                                <img src="img/icon/url1.png" alt="payment" class="quickBox__box--photo-img">
+                            </div>
+                            <div class="quickBox__box--heading">
+                                <h3 class="quickBox__box--heading-text">
+                                    Best Performing URLs
+                                </h3>
+                            </div>
+                            <div class="quickBox__box--para">
+                                <p class="quickBox__box--para-text">
+                                    <a href="https://www.alayn.co.uk/donate/fidya-kaffara/" target="_blank"
+                                        class="customers__content--box-url-text-link url">
+                                        https://www.alayn.co.uk/donate/fidya-kaffara/
+                                    </a>
+                                    <a href="https://www.alayn.co.uk/qurbani-2023/" target="_blank"
+                                        class="customers__content--box-url-text-link url">
+                                        https://www.alayn.co.uk/qurbani-2023/
+                                    </a>
+                                    <a href="https://www.alayn.co.uk/donate/fidya-kaffara/" target="_blank"
+                                        class="customers__content--box-url-text-link url">
+                                        https://www.alayn.co.uk/donate/fidya-kaffara/
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="quickBox__box quickBox__box--2">
+                        <div class="quickBox__box--textContent">
+                            <div class="quickBox__box--photo">
+                                <img src="img/icon/keyword1.png" alt="mail" class="quickBox__box--photo-img">
+                            </div>
+                            <div class="quickBox__box--heading">
+                                <h3 class="quickBox__box--heading-text">
+                                    High Performance Keywords
+                                </h3>
+                            </div>
+                            <div class="quickBox__box--para">
+                                <div class="quickBox__box--para-keyword">
+                                    <p class="quickBox__box--para-keyword-txt">
+                                        Al Ayn Foundation & welfare Centre
+                                    </p>
+                                    <p class="quickBox__box--para-keyword-txt">
+                                        Qubani Bakra Price 2023
+                                    </p>
+                                    <p class="quickBox__box--para-keyword-txt">
+                                        Al Ayn Foundation & welfare Centre
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="quickBox__box quickBox__box--4">
+                        <div class="quickBox__box--textContent">
+                            <div class="quickBox__box--photo">
+                                <img src="img/icon/click1.png" alt="invite" class="quickBox__box--photo-img">
+                            </div>
+                            <div class="quickBox__box--heading">
+                                <h3 class="quickBox__box--heading-text">
+                                    Device / Clicks
+                                </h3>
+                            </div>
+                            <div class="quickBox__box--para">
+                                <div class="ads__devices--stats-content">
+                                    <div class="quickBox__box--para">
+                                        <div class="quickBox__box--para-keyword">
+                                            <p class="quickBox__box--para-keyword-txt">
+                                                Mobile Phones / 4,216
+                                            </p>
+                                            <p class="quickBox__box--para-keyword-txt">
+                                                Computer / 2,011
+                                            </p>
+                                            <p class="quickBox__box--para-keyword-txt">
+                                                Tablets / 110
+                                            </p>
+                                            <p class="quickBox__box--para-keyword-txt">
+                                                TV Screens / 550
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- </div> -->
+            </section>
+            <!--=========================== Section Quick box Ends here =============================== -->
+
+
+            <!--=========================== Section Ads starts here =============================== -->
+
+            <section class="ads">
+                <!-- <div class="row">/////////////////////////////////////// -->
+                <div class="ads__content">
+                    <!--============ Yearly Key Metrics Table ============== -->
+                    <div class="ads__table">
+                        <div class="ads__table--headingArea">
+                            <div class="ads__table--headingArea-heading">
+                                <h3 class="ads__table--headingArea-heading-text">
+                                    Key Metrics
+                                </h3>
+                                <p class="ads__table--headingArea-heading-para">
+                                    Monthly table to show your key metrics
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="ads__table--content">
+                            <div class="ads__table--content-item ads__table--content-item-1">
+                                <h3 class="ads__table--content-item-heading">
+                                    Period
+                                </h3>
+                                <h3 class="ads__table--content-item-heading">
+                                    Impressions
+                                </h3>
+                                <h3 class="ads__table--content-item-heading">
+                                    Clicks
+                                </h3>
+                                <h3 class="ads__table--content-item-heading ">
+                                    Start Page
+                                </h3>
+                                <h3 class="ads__table--content-item-heading">
+                                    End Page
+                                </h3>
+                                <h3 class="ads__table--content-item-heading">
+                                    ctr %
+                                </h3>
+                                <h3 class="ads__table--content-item-heading">
+                                    Conversion Value
+                                </h3>
+                            </div>
+
+                            <div class="ads__table--content-item ads__table--content-item-2">
+                                <h3 class="ads__table--content-item-heading-month ">
+                                    January, 2023
+                                </h3>
+                                <p class="ads__table--content-item-data">
+                                    608,950
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    6,337
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    769
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    409
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    1.04
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    £275.22
+                                </p>
+                            </div>
+
+
+                            <div class="ads__table--content-item ads__table--content-item-3">
+                                <h3 class="ads__table--content-item-heading-month ">
+                                    February, 2023
+                                </h3>
+                                <p class="ads__table--content-item-data">
+                                    608,950
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    6,337
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    769
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    409
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    1.04
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    £474.53
+                                </p>
+
+                            </div>
+
+
+                            <div class="ads__table--content-item ads__table--content-item-4">
+                                <h3 class="ads__table--content-item-heading-month ">
+                                    March, 2023
+                                </h3>
+                                <p class="ads__table--content-item-data">
+                                    608,950
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    6,337
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    769
+
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    409
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    1.04
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    £147.58
+                                </p>
+
+                            </div>
+
+
+                            <div class="ads__table--content-item ads__table--content-item-5">
+                                <h3 class="ads__table--content-item-heading-month ">
+                                    April, 2023
+                                </h3>
+                                <p class="ads__table--content-item-data">
+                                    608,950
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    6,337
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    769
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    409
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    1.04
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    £575.22
+                                </p>
+
+                            </div>
+
+
+                            <div class="ads__table--content-item ads__table--content-item-6">
+                                <h3 class="ads__table--content-item-heading-month ">
+                                    May, 2023
+                                </h3>
+                                <p class="ads__table--content-item-data">
+                                    608,950
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    6,337
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    769
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    409
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    1.04
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    £320.85
+                                </p>
+
+                            </div>
+
+                            <div class="ads__table--content-item ads__table--content-item-7">
+                                <h3 class="ads__table--content-item-heading-month ">
+                                    June, 2023
+                                </h3>
+                                <p class="ads__table--content-item-data">
+                                    608,950
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    6,337
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    769
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    409
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    1.04
+                                </p>
+                                <p class="ads__table--content-item-data">
+                                    £722.50
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- </div> -->
+            </section>
+
+            <!--=========================== Section Ads ends here =============================== -->
+
+            <!-- ============ Masonry Layout ======================= -->
+            <section class="masonry">
+                <!-- <div class="row">////////////////////////////////////////////////// -->
+                <h3 class="gallery__heading">
+                    Some of Your Best Ads
+                </h3>
+                <div class="gallery">
+                    <figure class="gallery__item gallery__item--1"><img src="img/gallery/gal-1.jpg"
+                            onerror="this.style.display='none'" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--2"><img src="img/gallery/gal-7.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 2" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--3"><img src="img/gallery/gal-8.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 3" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--4"><img src="img/gallery/gal-4.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 4" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--5"><img src="img/gallery/gal-5.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 5" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--6"><img src="img/gallery/gal-6.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 6" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--7"><img src="img/gallery/gal-3.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 7" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--8"><img src="img/gallery/gal-10.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 8" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--9"><img src="img/gallery/gal-9.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 9" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--10"><img src="img/gallery/gal-5.jpg"
+                            onerror="this.style.display='none'" alt="Gallery image 10" class="gallery__img"></figure>
+                    <!-- <figure class="gallery__item gallery__item--11"><img src="img/gallery/gal-6.jpg" onerror="this.style.display='none'" alt="Gallery image 11" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--12"><img src="img/gallery/gal-2.jpg" onerror="this.style.display='none'" alt="Gallery image 12" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--13"><img src="img/gallery/gal-1.jpg" onerror="this.style.display='none'" alt="Gallery image 13" class="gallery__img"></figure>
+                    <figure class="gallery__item gallery__item--14"><img src="img/gallery/gal-2.jpg" onerror="this.style.display='none'" alt="Gallery image 14" class="gallery__img"></figure>  -->
+                </div>
+                <!-- </div> -->
+            </section>
+        </main>
+        <!--=========================== Section Customers Ends here =============================== -->
+
+        </main>
+        <!--=========================== Section Customers Ends here =============================== -->
+
+        <!--==================================== Cookies Popup =============================== -->
+
+        <div id="cookie-popup">
+            <p>
+                This website uses cookies to ensure you get the best experience. By continuing to use this site, you
+                agree to our
+                <a href="privacy.html" target="_blank" class="btn__cookies">Privacy Policy.</a>
+            </p>
+            <button id="accept-cookies">Accept</button>
+        </div>
+
+
+        <!--==================================== Cookies Popup Ends Here =============================== -->
+    </div>
+
+
+
+
+    <!-- Jquery CDN Link -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <!-- Font Awesome JS CDN Link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <!-- Apex Charts CDN Link -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts@latest/dist/apexcharts.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <!-- Jvector Map CDN Link -->
+    <script type="text/javascript" src="vectormap/dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="vectormap/dist/maps/jquery.vmap.usa.js" charset="utf-8"></script>
+    <!-- IonIcons CDN Link -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Date Range Picker -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <!-- Select 2 -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Masonry -->
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <!-- jsPDF Library CDN link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"></script>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
